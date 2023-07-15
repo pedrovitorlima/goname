@@ -1,6 +1,7 @@
 package FileManager
 
 import (
+	"fmt"
 	"log"
 	"sort"
 	"strconv"
@@ -39,13 +40,13 @@ func (f FileOrganiser) CreateRenameCommandMap(oddList []string, evenList []strin
 
 	pageCounter := 1
 	for index, oddPage := range oddList {
-		commands[oddPage] = "page-" + strconv.Itoa(pageCounter) + ".jpeg"
+		commands[oddPage] = generateFileName(pageCounter)
 		pageCounter++
 
 		lastIteration := index+1 == len(oddList)
 		if lastIteration && len(evenList) >= index {
 			for _, evenPage := range evenList[index:] {
-				commands[evenPage] = "page-" + strconv.Itoa(pageCounter) + ".jpeg"
+				commands[evenPage] = generateFileName(pageCounter)
 				pageCounter++
 			}
 			break
@@ -53,12 +54,17 @@ func (f FileOrganiser) CreateRenameCommandMap(oddList []string, evenList []strin
 
 		if len(evenList) >= index {
 			evenPage := evenList[index]
-			commands[evenPage] = "page-" + strconv.Itoa(pageCounter) + ".jpeg"
+			commands[evenPage] = generateFileName(pageCounter)
 			pageCounter++
 		}
 	}
 
 	return commands
+}
+
+func generateFileName(pageNumber int) string {
+	pageNumberWithDecimalCases := fmt.Sprintf("%04d", pageNumber)
+	return "page-" + pageNumberWithDecimalCases + ".jpeg"
 }
 
 func sortByPageNumberFromFilename(index1 int, index2 int, oddList []string) bool {

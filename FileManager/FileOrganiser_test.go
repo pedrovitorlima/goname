@@ -31,15 +31,15 @@ func TestCreateRenameCommandWhenMoreEvenThanOdds(t *testing.T) {
 	commandMap := organiser.CreateRenameCommandMap(oddList, evenList)
 
 	expectedCommandMap := map[string]string{
-		"odd-1.jpeg":  "page-1.jpeg",
-		"even-1.jpeg": "page-2.jpeg",
-		"odd-2.jpeg":  "page-3.jpeg",
-		"even-2.jpeg": "page-4.jpeg",
-		"odd-3.jpeg":  "page-5.jpeg",
-		"even-3.jpeg": "page-6.jpeg",
-		"odd-4.jpeg":  "page-7.jpeg",
-		"even-4.jpeg": "page-8.jpeg",
-		"even-5.jpeg": "page-9.jpeg",
+		"odd-1.jpeg":  "page-0001.jpeg",
+		"even-1.jpeg": "page-0002.jpeg",
+		"odd-2.jpeg":  "page-0003.jpeg",
+		"even-2.jpeg": "page-0004.jpeg",
+		"odd-3.jpeg":  "page-0005.jpeg",
+		"even-3.jpeg": "page-0006.jpeg",
+		"odd-4.jpeg":  "page-0007.jpeg",
+		"even-4.jpeg": "page-0008.jpeg",
+		"even-5.jpeg": "page-0009.jpeg",
 	}
 
 	assertMapsAreEquivalent(t, expectedCommandMap, commandMap)
@@ -54,14 +54,14 @@ func TestCreateRenameCommandWhenSameLengthOfOddsAndEven(t *testing.T) {
 	commandMap := organiser.CreateRenameCommandMap(oddList, evenList)
 
 	expectedCommandMap := map[string]string{
-		"odd-1.jpeg":  "page-1.jpeg",
-		"even-1.jpeg": "page-2.jpeg",
-		"odd-2.jpeg":  "page-3.jpeg",
-		"even-2.jpeg": "page-4.jpeg",
-		"odd-3.jpeg":  "page-5.jpeg",
-		"even-3.jpeg": "page-6.jpeg",
-		"odd-4.jpeg":  "page-7.jpeg",
-		"even-4.jpeg": "page-8.jpeg",
+		"odd-1.jpeg":  "page-0001.jpeg",
+		"even-1.jpeg": "page-0002.jpeg",
+		"odd-2.jpeg":  "page-0003.jpeg",
+		"even-2.jpeg": "page-0004.jpeg",
+		"odd-3.jpeg":  "page-0005.jpeg",
+		"even-3.jpeg": "page-0006.jpeg",
+		"odd-4.jpeg":  "page-0007.jpeg",
+		"even-4.jpeg": "page-0008.jpeg",
 	}
 
 	assertMapsAreEquivalent(t, expectedCommandMap, commandMap)
@@ -76,15 +76,15 @@ func TestCreateRenameCommandWhenMoreOddsThanEvens(t *testing.T) {
 	commandMap := organiser.CreateRenameCommandMap(oddList, evenList)
 
 	expectedCommandMap := map[string]string{
-		"odd-1.jpeg":  "page-1.jpeg",
-		"even-1.jpeg": "page-2.jpeg",
-		"odd-2.jpeg":  "page-3.jpeg",
-		"even-2.jpeg": "page-4.jpeg",
-		"odd-3.jpeg":  "page-5.jpeg",
-		"even-3.jpeg": "page-6.jpeg",
-		"odd-4.jpeg":  "page-7.jpeg",
-		"even-4.jpeg": "page-8.jpeg",
-		"odd-5.jpeg":  "page-9.jpeg",
+		"odd-1.jpeg":  "page-0001.jpeg",
+		"even-1.jpeg": "page-0002.jpeg",
+		"odd-2.jpeg":  "page-0003.jpeg",
+		"even-2.jpeg": "page-0004.jpeg",
+		"odd-3.jpeg":  "page-0005.jpeg",
+		"even-3.jpeg": "page-0006.jpeg",
+		"odd-4.jpeg":  "page-0007.jpeg",
+		"even-4.jpeg": "page-0008.jpeg",
+		"odd-5.jpeg":  "page-0009.jpeg",
 	}
 
 	assertMapsAreEquivalent(t, expectedCommandMap, commandMap)
